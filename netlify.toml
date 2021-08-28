@@ -1,0 +1,9 @@
+[build]
+  command = "react-scripts build"
+  functions = ".netlify/functions/"
+  publish = "build"
+
+  [context.production]
+    command = "yarn build && cd functions/node-fetch && yarn"
+    functions = ".netlify/functions/"
+    publish = "build"

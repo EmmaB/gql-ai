@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Advance info sheet demo app
+
+This is a small demo to provide a working example of using Consonance GraphQL as a data source to automate the publishing task of generating advance information sheets.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## CORS access
 
-In the project directory, you can run:
+If CORS access provides an insurmountable hurdle to your using GraphQL, please contact us on support@consonance.app as we may decide to whitelist client apps.
 
-### `yarn start`
+In this demo app, we have used a Netlify function to accommodate CORS. This is a good article to get the gist of what we're doing here. https://www.digitalocean.com/community/tutorials/nodejs-solve-cors-once-and-for-all-netlify-dev
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `yarn test`
+Clone this repo. Run `yarn` to build your node modules.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Use Netlify's free tier to run in development and also deploy to the internet. You will need an account and a Netlify project. Install [Netlify CLI](https://docs.netlify.com/cli/get-started/) and follow their instructions to get set up.
 
-### `yarn build`
+```
+npm i -g netlify-cli
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+$ netlify init # or `ntl init`
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start a local proxy server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ netlify dev # or `ntl dev`
+```
 
-### `yarn eject`
+You can even share a live development server: see the [Netlify docs](https://docs.netlify.com/cli/get-started/#share-a-live-development-server) for more detail.
+```
+netlify dev --live
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+You should see the proxy server run on `localhost:8888`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Keys
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+You'll need to add a .env file at the root of the project and add in your Consonance keys. Use these names, and replace the long string with your real Consonance key.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+REACT_APP_CONSONANCE_KEY=asdfghjkijuhygtfdcfvghjklkjhgfvcvb
+REACT_APP_URL=https://web.consonance.app/graphql
+```
 
-## Learn More
+## Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Locally, run:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+yarn run build
+```
 
-### Code Splitting
+Then:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+netlify deploy --prod
+```
