@@ -1,8 +1,10 @@
 # Advance info sheet demo app
 
-This is a small demo to provide a working example of using Consonance GraphQL as a data source to automate the publishing task of generating advance information sheets.
+This is a rough but working demo to provide an example of using Consonance GraphQL as a data source to automate the publishing task of generating advance information sheets in PDF.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses [react-pdf](https://react-pdf.org/) to write the PDFs.
+
+![Demo](/demo.png)
 
 ## CORS access
 
@@ -58,3 +60,7 @@ Then:
 ```
 netlify deploy --prod
 ```
+
+## Designs
+
+There are two designs sketched out. Uncomment either App.js or Design.js in `index.js`.

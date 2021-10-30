@@ -311,7 +311,7 @@ const WorkAdvanceInfoSheet = () => {
           <input
             id="workId"
             type="text"
-            placeholder="Enter work ID e.g. 240976"
+            placeholder="Enter Consonance work ID"
             name="Work ID"
             ref={inputRef}
           />{" "}
