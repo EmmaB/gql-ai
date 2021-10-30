@@ -4,7 +4,7 @@ This is a rough but working demo to provide an example of using Consonance Graph
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses [react-pdf](https://react-pdf.org/) to write the PDFs.
 
-![Demo](/demo.png)
+![Screenshot](https://github.com/EmmaB/gql-ai/blob/0b0cc2bcaa349ab38922dad2223e3302bbcbead7/public/demo.png)
 
 ## CORS access
 
