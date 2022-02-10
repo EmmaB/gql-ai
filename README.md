@@ -36,6 +36,14 @@ You can even share a live development server: see the [Netlify docs](https://doc
 netlify dev --live
 ```
 
+You'll need to add a state.json file in the .netlify folder, with these contents: 
+
+```
+{
+	"siteId": "your-site-id"
+}
+```
+
 You should see the proxy server run on `localhost:8888`.
 
 ## Keys
