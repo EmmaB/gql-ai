@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## CORS access
 
-If CORS access provides an insurmountable hurdle to your using GraphQL, please contact us on support@consonance.app as we may decide to whitelist client apps.
+If CORS access provides an insurmountable hurdle to your using GraphQL, please contact us on support@consonance.app as we may decide to allowlist client apps.
 
 In this demo app, we have used a Netlify function to accommodate CORS. This is a good article to get the gist of what we're doing here. https://www.digitalocean.com/community/tutorials/nodejs-solve-cors-once-and-for-all-netlify-dev
 
